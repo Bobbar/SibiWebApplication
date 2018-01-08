@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Storage.Internal;
-using System;
 using SibiWeb.Data;
+using System;
 
 namespace SibiWeb.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20180103153439_Initial")]
-    partial class Initial
+    [Migration("20180108141908_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -132,6 +132,8 @@ namespace SibiWeb.Migrations
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
+
+                    b.Property<string>("ADUsername");
 
                     b.Property<int>("AccessFailedCount");
 

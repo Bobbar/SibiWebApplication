@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace SibiWeb.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,7 @@ namespace SibiWeb.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    ADUsername = table.Column<string>(nullable: true),
                     AccessFailedCount = table.Column<int>(nullable: false),
                     ConcurrencyStamp = table.Column<string>(nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),
